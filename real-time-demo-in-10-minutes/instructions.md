@@ -8,7 +8,7 @@
 
 ![Navigating to Workspaces in Fabric](images/create_workspace.png)
 
-3. Insert a name for the workspace, you can choose any name you like. You can leave the other cells empty. Then click on Advanced.
+3. You need to choose a name for the workspace. Insert the name DemoRealTime. You can leave the other cells empty. Then click on Advanced.
 
 ![Create a workspace](images/create_workspace_tab.png)
 
@@ -44,4 +44,24 @@ In this demonstration, we will set up a KQL database tailored to ingest streamin
 
 5. Toggle the button to Active and select Done.
 
-![Change OneLake availability](images/data_availability_onelake.png)
+![Active OneLake availability](images/data_availability_onelake.png)
+
+# Step 3 : Create an Eventstream
+
+Eventstream allows you to capture, transform and route real-time events to various destinations with a no-code experience. You can connect to various streaming data sources, such as Azure Event Hubs, Azure IoT Hub or Kafka, and ingest the data on Fabric.
+
+1. Return to the workspace you created earlier.
+
+![Return to the workspace](images/fabric_left_pane.png)
+
+2. The workspace should contain the KQL database you've just created. In this workspace, you'll find all the elements you'll create for this project. Click on the New button, then click on More Options at the bottom of the drop-down menu.
+
+![Workspace with the KQL database](images/workspace_with_kql_database.png)
+
+3. Scroll down to the Real-Time Analytics section, then click on Eventstream.
+
+![Real Time Analytics Options](images/real_time_analytics_options.png)
+
+4. You will be asked to choose a name for the Eventstream. Insert the name NyTaxiTripsEventstream.
+
+![Name of the Eventstream](images/create_eventstream.png)
