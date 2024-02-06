@@ -65,3 +65,33 @@ Eventstream allows you to capture, transform and route real-time events to vario
 4. You will be asked to choose a name for the Eventstream. Insert the name NyTaxiTripsEventstream.
 
 ![Name of the Eventstream](images/create_eventstream.png)
+
+5. You will be automatically redirected to Eventstream. You will land on the page below. Click on New Source to display the drop-down menu and click on Sample data.
+
+![Eventstream sample data](images/eventstream_sample_data.png)
+
+6. Enter nytaxitripsdatasource as the Source Name, and then select Yellow Taxi from the dropdown of Sample data. Then click on Add at the bottom of the window.
+
+![Eventstream sample data configuration](images/eventstream_sample_data_configuration.png)
+
+7. With the data source configured, we're now ready to configure the destination. Click on New destination, then on KQL Database.
+
+![Eventstream data destination](images/eventstream_destination.png)
+
+8. On the menu that opens, click on the Direct Ingestion mode. For destination name, enter nytaxidatabase. For the workspace, select the workspace we created at the start of the exercise, DemoRealTime. Next, select the KQL database we created earlier, in this case NycTaxiDB. Finally, click on Add and configure.
+
+![Eventstream destination configuration](images/eventstream_destination_configuration.png)
+
+9. In the window that opens, click on + New table below NycTaxiDB and enter the name nyctaxitrips. Then click on Next.
+
+![Eventstream destination configure tab](images/eventstream_destination_configure_tab.png)
+
+10. In the Inspect tab, check that the format is set to JSON. Then click on the Edit columns button to edit the type of the columns.
+
+![Eventstream destination inspect tab](images/eventstream_destination_inspect_tab.png)
+
+11. On the menu that appears, change the type of the *VendorID* column to int, the *passenger_count* column to long and the *payment_type* column to real. Then click on Apply.
+
+![Eventstream destination inspect tab](images/change_data_type.png)
+
+12. Then, click Finish to finalize the configuration of the Eventstream.
