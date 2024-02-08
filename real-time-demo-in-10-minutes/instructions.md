@@ -92,6 +92,33 @@ Eventstream allows you to capture, transform and route real-time events to vario
 
 11. On the menu that appears, change the type of the *VendorID* column to int, the *passenger_count* column to long and the *payment_type* column to real. Then click on Apply.
 
-![Eventstream destination inspect tab](images/change_data_type.png)
+![Eventstream destination change data type](images/change_data_type.png)
 
 12. Then, click Finish to finalize the configuration of the Eventstream.
+
+# Step 4 : Get historical data
+
+In this step, we'll see how to populate our database with flat files. This step is especially useful for loading historical data.
+
+1. Download the [ny-yellow-taxi-location-info.csv](https://raw.githubusercontent.com/microsoft/fabric-samples/main/docs-samples/real-time-analytics/ny-yellow-taxi-location-info.csv "ny-yellow-taxi-location-info.csv") file. The data in this file will be used as a dimension table to indicate the different areas of New York where taxis operate.
+
+2. Return to your KQL database and click on the Get Data button.
+
+![Eventstream destination change data type](images/kql_database_get_data_button.png)
+
+3. In the window that opens, click Local file.
+
+![Data source local file](images/data_source_local_file.png)
+
+4. Click the New Table button and rename it to Locations. You'll then be able to load the CSV file you just downloaded. Load the file and click Next.
+
+![Data source local file configuration](images/configure_local_file.png)
+
+5. A preview of the data will be displayed. We have the option of editing the column type, as we did with the first table we created, but this is not necessary here. Click Finish.
+
+![Data source local file configuration](images/inspect_data_source.png)
+
+6. You will see a confirmation that the data has been loaded into the table. Click Close when all three steps have green checkmarks.
+
+![Data source local file configuration](images/summary_local_file_import.png)
+
