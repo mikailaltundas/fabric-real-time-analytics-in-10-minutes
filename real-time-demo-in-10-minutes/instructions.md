@@ -116,9 +116,61 @@ In this step, we'll see how to populate our database with flat files. This step 
 
 5. A preview of the data will be displayed. We have the option of editing the column type, as we did with the first table we created, but this is not necessary here. Click Finish.
 
-![Data source local file configuration](images/inspect_data_source.png)
+![Inspect data source](images/inspect_data_source.png)
 
 6. You will see a confirmation that the data has been loaded into the table. Click Close when all three steps have green checkmarks.
 
-![Data source local file configuration](images/summary_local_file_import.png)
+![Summary local file import](images/summary_local_file_import.png)
 
+# Step 5 : Write a KQL query
+
+KQL queries are powerful tools for analyzing large datasets. They are formulated as read-only queries in plain text, utilizing a data flow model that is straightforward to understand, create, and automate.
+
+In this step, we'll write a KQL query to analyze the output data and create a Power BI dashboard based on the results.
+
+1. Return to the KQL database, click the New related item button, and then click the KQL Queryset button.
+
+![Create new KQL Queryset](images/create_new_kql_queryset.png)
+
+2. Name the query *nyctaxiquery*
+
+3. Remove the code examples in the query and type the query below:
+
+```text
+nyctaxitrips
+| where PULocationID == DOLocationID
+| lookup (Locations) on $left.PULocationID==$right.LocationID
+| summarize Count=count() by Borough, Zone, Latitude, Longitude
+```
+
+The query identifies and counts all taxi trips that start and end in the same location. It then groups these counts by specific geographic details of those places.
+
+You should obtain an output similar to the one in the image below (the values in the table may be different).
+
+![KQL query results](images/kql_query_results.png)
+
+# Step 6 : Build a Power BI report
+
+1. On the same KQL queryset page, click on the Build Power BI report button. A Power BI window will appear. We can build our dashboard on it.
+
+![Build Power BI report on KQL Queryset](images/build_powerbi_report.png)
+
+2. In the Visualizations tab, click on the Map icon. Drag the Borough field into Legend, Latitude into Latitude, Longitude into Longitude and Count into Bubble size.
+
+![Create Power BI map visualization](images/create_powerbi_map.png)
+
+> By default, the Location and Longitude fields may be summarized. If this is the case, click on the arrow next to the fields, then click on Don't summarize.
+
+> ![Don't summarize fields Power BI](images/summarize_fields_powerbi.png)
+
+3. Then click on the Stacked Bar Chart icon to create a bar chart. Drag the Borough field into Y-axis and Count into X-axis.
+
+![Create a stacked bar chart in Power BI](images/powerbi_stacked_bar_chart.png)
+
+4. Name the file nyctaximapsreport and save it in the workspace created at the beginning of the demonstration, click on Continue.
+
+![Save Power BI report](images/save_powerbi_report.png)
+
+5. A window appears confirming that the report has been saved. Click Open the file in Power BI to view, edit, and get a shareable link.
+
+![Report is saved Power BI confirmation](images/saved_report_confirmation.png)
