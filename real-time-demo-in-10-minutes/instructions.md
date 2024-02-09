@@ -174,3 +174,29 @@ You should obtain an output similar to the one in the image below (the values in
 5. A window appears confirming that the report has been saved. Click Open the file in Power BI to view, edit, and get a shareable link.
 
 ![Report is saved Power BI confirmation](images/saved_report_confirmation.png)
+
+6. In the window that opens, click on the Edit button.
+
+![Edit Power BI report](images/edit_powerbi_report.png)
+
+7. In the Visualizations pane, select the paintbrush icon to format the page and expand Page refresh. Then, toggle Page refresh to On and set the refresh interval to 10 seconds.
+
+![Edit refresh interval](images/page_refresh_powerbi.png)
+
+8. On the ribbon, click File, then Save to save changes.
+
+![Save changes on the dashboard](images/save_edited_powerbi_report.png)
+
+9. You can return to your workspace to view all the elements created during this tutorial.
+
+![Visualize workspace](images/final_workspace.png)
+
+This concludes our demonstration. In just ten minutes, we've covered the following key steps:
+
+- Setting up a workspace in Microsoft Fabric
+- Establishing and configuring a KQL database
+- Initiating and configuring an Eventstream for real-time data ingestion into the KQL database
+- Crafting KQL queries for data analysis
+- Developing and deploying Power BI dashboards utilizing the data from the KQL database
+
+By following these steps, you're well on your way to effectively managing and analyzing real-time data within Microsoft Fabric.
