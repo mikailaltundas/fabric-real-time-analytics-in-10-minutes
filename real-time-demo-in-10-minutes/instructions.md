@@ -1,6 +1,6 @@
 # Step 1 : Create a workspace
 
-1. In the Microsoft Fabric portal, click on the Power BI experience at the bottom left of the window.
+1. Go to the [Microsoft Fabric portal](https://app.fabric.microsoft.com/ "Microsoft Fabric portal"). Click on the Power BI experience at the bottom left of the window.
 
 ![Microsoft Fabric Portal Home](images/fabric_portal_home.png)
 
@@ -8,11 +8,11 @@
 
 ![Navigating to Workspaces in Fabric](images/create_workspace.png)
 
-3. You need to choose a name for the workspace. Insert the name DemoRealTime. You can leave the other cells empty. Then click on Advanced.
+3. You need to choose a name for the workspace. Insert the name *DemoRealTime*. You can leave the other cells empty. Then click on Advanced.
 
 ![Create a workspace](images/create_workspace_tab.png)
 
-4. Then choose your Fabric license. You can, for example, use your trial capacity or a Fabric capacity you've created on Azure. Leave the other settings as default, then click Apply.
+4. Choose your Fabric license. You can, for example, use your trial capacity or a Fabric capacity you've created on Azure. Leave the other settings as default, then click Apply.
 
 ![Workspace advanced settings](images/create_workspace_advanced_tab.png)
 
@@ -34,7 +34,7 @@ In this demonstration, we will set up a KQL database tailored to ingest streamin
 
 ![Real Time Analytics Options](images/real_time_analytics_options.png)
 
-3. Insert the name NycTaxiDB for the database name, leave the type set to New Database (default) and click Create.
+3. Insert the name *NycTaxiDB* for the database name, leave the type set to New Database (default) and click Create.
 
 ![Choose KQL database name](images/new_kql_database.png)
 
@@ -50,7 +50,7 @@ In this demonstration, we will set up a KQL database tailored to ingest streamin
 
 Eventstream allows you to capture, transform and route real-time events to various destinations with a no-code experience. You can connect to various streaming data sources, such as Azure Event Hubs, Azure IoT Hub or Kafka, and ingest the data on Fabric.
 
-1. Return to the workspace you created earlier.
+1. Return to the workspace you created earlier by clicking the RealTimeDemo button on the left menu.
 
 ![Return to the workspace](images/fabric_left_pane.png)
 
@@ -62,27 +62,29 @@ Eventstream allows you to capture, transform and route real-time events to vario
 
 ![Real Time Analytics Options](images/real_time_analytics_options.png)
 
-4. You will be asked to choose a name for the Eventstream. Insert the name NyTaxiTripsEventstream.
+4. You will be asked to choose a name for the Eventstream. Insert the name *NyTaxiTripsEventstream*.
 
 ![Name of the Eventstream](images/create_eventstream.png)
+
+For this demonstration, we're going to use a publicly accessible dataset from Microsoft Fabric, featuring New York City taxi trips. This dataset includes a variety of information, including the date and time of pickup and drop-off, the number of passengers, the distance traveled, and much more.
 
 5. You will be automatically redirected to Eventstream. You will land on the page below. Click on New Source to display the drop-down menu and click on Sample data.
 
 ![Eventstream sample data](images/eventstream_sample_data.png)
 
-6. Enter nytaxitripsdatasource as the Source Name, and then select Yellow Taxi from the dropdown of Sample data. Then click on Add at the bottom of the window.
+6. Enter *nytaxitripsdatasource* as the Source Name, and then select Yellow Taxi from the dropdown of Sample data. Then click on Add at the bottom of the window.
 
 ![Eventstream sample data configuration](images/eventstream_sample_data_configuration.png)
 
-7. With the data source configured, we're now ready to configure the destination. Click on New destination, then on KQL Database.
+7. With the data source configured, we can now choose the destination. There are several options, such as ingesting data into a lakehouse or a KQL database. For this demonstration, we'll ingest the data into the KQL database we created earlier. Click on New destination, then on KQL Database.
 
 ![Eventstream data destination](images/eventstream_destination.png)
 
-8. On the menu that opens, click on the Direct Ingestion mode. For destination name, enter nytaxidatabase. For the workspace, select the workspace we created at the start of the exercise, DemoRealTime. Next, select the KQL database we created earlier, in this case NycTaxiDB. Finally, click on Add and configure.
+8. On the menu that opens, click on the Direct Ingestion mode. For destination name, enter nytaxidatabase. For the workspace, select the workspace we created at the beginning of the tutorial, *DemoRealTime*. Next, select the KQL database we created earlier, in this case *NycTaxiDB*. Finally, click on Add and configure.
 
 ![Eventstream destination configuration](images/eventstream_destination_configuration.png)
 
-9. In the window that opens, click on + New table below NycTaxiDB and enter the name nyctaxitrips. Then click on Next.
+9. In the window that opens, click on + New table below *NycTaxiDB* and enter the name *nyctaxitrips*. Then click on Next.
 
 ![Eventstream destination configure tab](images/eventstream_destination_configure_tab.png)
 
@@ -102,7 +104,7 @@ In this step, we'll see how to populate our database with flat files. This step 
 
 1. Download the [ny-yellow-taxi-location-info.csv](https://raw.githubusercontent.com/microsoft/fabric-samples/main/docs-samples/real-time-analytics/ny-yellow-taxi-location-info.csv "ny-yellow-taxi-location-info.csv") file. The data in this file will be used as a dimension table to indicate the different areas of New York where taxis operate.
 
-2. Return to your KQL database and click on the Get Data button.
+2. Return to your KQL database and click on the Get data button.
 
 ![Eventstream destination change data type](images/kql_database_get_data_button.png)
 
@@ -110,7 +112,7 @@ In this step, we'll see how to populate our database with flat files. This step 
 
 ![Data source local file](images/data_source_local_file.png)
 
-4. Click the New Table button and rename it to Locations. You'll then be able to load the CSV file you just downloaded. Load the file and click Next.
+4. Click the New Table button and rename it to *Locations*. You'll then be able to load the CSV file you just downloaded. Load the file and click Next.
 
 ![Data source local file configuration](images/configure_local_file.png)
 
@@ -121,6 +123,8 @@ In this step, we'll see how to populate our database with flat files. This step 
 6. You will see a confirmation that the data has been loaded into the table. Click Close when all three steps have green checkmarks.
 
 ![Summary local file import](images/summary_local_file_import.png)
+
+The data from the CSV file has now been loaded into the KQL database.
 
 # Step 5 : Write a KQL query
 
@@ -155,7 +159,7 @@ You should obtain an output similar to the one in the image below (the values in
 
 ![Build Power BI report on KQL Queryset](images/build_powerbi_report.png)
 
-2. In the Visualizations tab, click on the Map icon. Drag the Borough field into Legend, Latitude into Latitude, Longitude into Longitude and Count into Bubble size.
+2. In the Visualizations tab, click on the Map icon. Drag the *Borough* field into Legend, *Latitude* into Latitude, *Longitude* into Longitude and *Count* into Bubble size.
 
 ![Create Power BI map visualization](images/create_powerbi_map.png)
 
@@ -167,7 +171,7 @@ You should obtain an output similar to the one in the image below (the values in
 
 ![Create a stacked bar chart in Power BI](images/powerbi_stacked_bar_chart.png)
 
-4. Name the file nyctaximapsreport and save it in the workspace created at the beginning of the demonstration, click on Continue.
+4. Click on File, then on Save. Name the file *nyctaximapsreport* and save it in the workspace created at the beginning of the demonstration, click on Continue.
 
 ![Save Power BI report](images/save_powerbi_report.png)
 
