@@ -30,7 +30,7 @@ In this demonstration, we will set up a KQL database tailored to ingest streamin
 
 ![Workspace more options](images/workspace_more_options.png)
 
-2. Scroll down to the Real-Time Analytics section, and click on the KQL Database button to create a KQL database.
+2. Scroll down to the Real-Time Intelligence section, and click on the KQL Database button to create a KQL database.
 
 ![Real Time Analytics Options](images/real_time_analytics_options.png)
 
@@ -58,7 +58,7 @@ Eventstream allows you to capture, transform and route real-time events to vario
 
 ![Workspace with the KQL database](images/workspace_with_kql_database.png)
 
-3. Scroll down to the Real-Time Analytics section, then click on Eventstream.
+3. Scroll down to the Real-Time Intelligence section, then click on Eventstream.
 
 ![Real Time Analytics Options](images/real_time_analytics_options.png)
 

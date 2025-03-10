@@ -1,6 +1,6 @@
-# 10-minute demonstration of Microsoft Fabric's Real-Time Analytics ⚡
+# 10-minute demonstration of Microsoft Fabric's Real-Time Intelligence ⚡
 
-The purpose of this repository is to showcase a concise, 10-minute walkthrough of the Real-Time Analytics experience within Microsoft Fabric. This tutorial is tailored for diverse audiences and contexts, such as webinars, video content, customer presentations, and more.
+The purpose of this repository is to showcase a concise, 10-minute walkthrough of the Real-Time Intelligence experience within Microsoft Fabric. This tutorial is tailored for diverse audiences and contexts, such as webinars, video content, customer presentations, and more.
 
 The demonstration covers the following key steps:
 
@@ -12,5 +12,5 @@ The demonstration covers the following key steps:
 
 # Sources 📚
 
-This repository presents a streamlined, 10-minute version of the official [Microsoft tutorial on Real-Time Analytics](https://learn.microsoft.com/en-us/fabric/real-time-analytics/tutorial-introduction), providing a quick yet comprehensive overview. For those seeking a deeper understanding, we invite you to follow the provided link to access a more expansive and detailed tutorial.
+This repository presents a streamlined, 10-minute version of the official [Microsoft tutorial on Real-Time Intelligence](https://learn.microsoft.com/en-us/fabric/real-time-analytics/tutorial-introduction), providing a quick yet comprehensive overview. For those seeking a deeper understanding, we invite you to follow the provided link to access a more expansive and detailed tutorial.
 
