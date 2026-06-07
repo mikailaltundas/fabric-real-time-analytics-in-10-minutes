@@ -8,9 +8,9 @@ The demonstration covers the following key steps:
 - Establishing and configuring a KQL database
 - Initiating and configuring an Eventstream for real-time data ingestion into the KQL database
 - Crafting KQL queries for data analysis
-- Developing and deploying Power BI dashboards utilizing the data from the KQL database
+- Developing and deploying Power BI reports utilizing the data from the KQL database
 
 # Sources 📚
 
-This repository presents a streamlined, 10-minute version of the official [Microsoft tutorial on Real-Time Intelligence](https://learn.microsoft.com/en-us/fabric/real-time-analytics/tutorial-introduction), providing a quick yet comprehensive overview. For those seeking a deeper understanding, we invite you to follow the provided link to access a more expansive and detailed tutorial.
+This repository presents a streamlined, 10-minute version of the official [Microsoft tutorial on Real-Time Intelligence on Fabric](https://learn.microsoft.com/en-us/fabric/real-time-analytics/tutorial-introduction), providing a quick yet comprehensive overview. For those seeking a deeper understanding, we invite you to follow the provided link to access a more expansive and detailed tutorial.
 
